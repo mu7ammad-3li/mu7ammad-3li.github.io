@@ -1,13 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 export function TypeAnimation() {
-  const titles = [
-    "Full Stack Product Engineer",
-    "AWS Cloud Specialist",
-    "AI Integration Expert",
-  ];
+  const titles = useMemo(
+    () => [
+      "Full Stack Product Engineer",
+      "AWS Cloud Specialist",
+      "AI Integration Expert",
+    ],
+    [],
+  );
 
   const [currentTitle, setCurrentTitle] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -32,7 +35,7 @@ export function TypeAnimation() {
           }
         }
       },
-      isDeleting ? 50 : 100
+      isDeleting ? 50 : 100,
     );
 
     return () => clearTimeout(timeout);

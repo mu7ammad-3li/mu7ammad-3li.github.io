@@ -39,7 +39,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
           >
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               Muhammad Ali
             </span>
@@ -62,9 +62,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto"
           >
-            Full Stack Product Engineer with 3+ years building enterprise applications.
-            Specialized in AWS cloud automation, MERN development, and AI-powered solutions
-            that deliver measurable business impact.
+            Full Stack Product Engineer with 3+ years building enterprise
+            applications. Specialized in AWS cloud automation, MERN development,
+            and AI-powered solutions that deliver measurable business impact.
           </motion.p>
 
           {/* CTA Buttons */}

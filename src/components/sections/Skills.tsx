@@ -22,7 +22,8 @@ export function Skills() {
             </span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit spanning frontend, backend, cloud infrastructure, and AI integration.
+            A comprehensive toolkit spanning frontend, backend, cloud
+            infrastructure, and AI integration.
           </p>
         </motion.div>
 
@@ -38,7 +39,7 @@ export function Skills() {
               <Card className="h-full hover:border-primary/50 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-lg font-mono text-primary">
-                    // {category.title}
+                    {`// ${category.title}`}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>

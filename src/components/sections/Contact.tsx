@@ -45,14 +45,15 @@ export function Contact() {
           className="max-w-4xl mx-auto text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Let's Work{" "}
+            Let&apos;s Work{" "}
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               Together
             </span>
           </h2>
           <p className="text-muted-foreground mb-12 max-w-2xl mx-auto">
-            I'm currently available for remote opportunities, consulting projects, and interesting
-            collaborations. Feel free to reach out if you have a project in mind or just want to connect.
+            I&apos;m currently available for remote opportunities, consulting
+            projects, and interesting collaborations. Feel free to reach out if
+            you have a project in mind or just want to connect.
           </p>
 
           {/* Location & Availability */}
@@ -62,7 +63,9 @@ export function Contact() {
                 <MapPin className="h-5 w-5 text-primary" />
                 <div className="text-left">
                   <p className="text-sm font-medium">Location</p>
-                  <p className="text-sm text-muted-foreground">{contactInfo.location}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {contactInfo.location}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -71,7 +74,9 @@ export function Contact() {
                 <Phone className="h-5 w-5 text-primary" />
                 <div className="text-left">
                   <p className="text-sm font-medium">Phone</p>
-                  <p className="text-sm text-muted-foreground">{contactInfo.phone}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {contactInfo.phone}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -102,7 +107,9 @@ export function Contact() {
                         </div>
                         <div className="text-left flex-1">
                           <p className="font-medium">{link.name}</p>
-                          <p className="text-sm text-muted-foreground">{link.value}</p>
+                          <p className="text-sm text-muted-foreground">
+                            {link.value}
+                          </p>
                         </div>
                       </CardContent>
                     </Card>
