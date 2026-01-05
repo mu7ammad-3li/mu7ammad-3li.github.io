@@ -1,0 +1,61 @@
+refactor: migrate portfolio to CV-style design
+
+Major redesign from animated portfolio to clean, professional CV layout
+
+## ✨ New Features
+- Command menu (Cmd/Ctrl+K) for keyboard navigation
+- Print-optimized styles for PDF export
+- Error boundaries for graceful error handling
+- Loading skeletons for better UX
+- SEO enhancements with JSON-LD structured data
+- Responsive CV-style layout with max-width constraints
+
+## 🎨 Design Changes
+- Replaced animated hero with professional header section
+- Minimal, clean typography and spacing
+- Print-friendly color scheme
+- Single-column layout optimized for readability
+- Professional avatar display with contact buttons
+
+## 📦 New Components
+- Header: Profile header with avatar and contact info
+- Summary: Professional about section
+- WorkExperience: Timeline-style work history cards
+- Education: Education history section
+- Skills: Badge-based skills display
+- Projects: Responsive project grid
+
+## 🛠️ Technical Improvements
+- Consolidated all data into single resume-data.tsx file
+- Added cmdk and vaul dependencies for command menu
+- Updated UI components (section, avatar, command, dialog, drawer)
+- Added type definitions in lib/types.ts
+- Implemented structured data generation for SEO
+- Updated theme colors to match CV design
+
+## 📝 Content Updates
+- Added MERIDIEN Engine as Founder & Maintainer (Sept 2024 - Present)
+- Updated work experience with detailed highlights
+- Consolidated 6 projects with tech stacks
+- Organized skills into clean badge layout
+
+## 🗑️ Removed
+- Old animated portfolio components (Hero, AnimatedStats, TypeAnimation)
+- Separate data files (contact.ts, experience.ts, projects.ts, skills.ts)
+- Theme provider and dark/light mode toggle
+- Old layout components (Header, Footer, ThemeToggle)
+- Unused scripts (generate-resume.sh)
+- Outdated documentation (QUICKSTART.md, SETUP-STATUS.md)
+
+## 🏗️ Architecture
+- Single source of truth: resume-data.tsx
+- CV section components in app/components/
+- Reusable UI components from shadcn/ui
+- Error boundaries at section level
+- Suspense boundaries with loading states
+
+## ✅ Build Status
+- Production build: Successful
+- Static export: Ready for deployment
+- TypeScript: No errors
+- ESLint: Passing

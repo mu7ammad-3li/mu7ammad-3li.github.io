@@ -1,53 +1,93 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import type React from "react";
+import { ErrorBoundary } from "@/components/error-boundary";
+import { RESUME_DATA } from "@/data/resume-data";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Muhammad Ali - Full Stack Product Engineer",
-  description: "Full Stack Product Engineer with 3+ years experience in AWS, MERN Stack, and AI Integration. Specialized in cloud automation, cost optimization, and building scalable applications.",
-  keywords: ["Full Stack Developer", "AWS", "React", "Node.js", "TypeScript", "Cloud Engineer"],
-  authors: [{ name: "Muhammad Ali", url: "https://mu7ammad-3li.github.io" }],
+  metadataBase: new URL("https://mu7ammad-3li.github.io"),
+  title: {
+    default: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
+    template: `%s | ${RESUME_DATA.name}`,
+  },
+  description: RESUME_DATA.about,
+  keywords: [
+    "resume",
+    "cv",
+    "portfolio",
+    RESUME_DATA.name,
+    "software engineer",
+    "full stack developer",
+    "react",
+    "next.js",
+    "typescript",
+    "AWS",
+    "cloud engineer",
+  ],
+  authors: [{ name: RESUME_DATA.name }],
+  creator: RESUME_DATA.name,
+  publisher: RESUME_DATA.name,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
-    title: "Muhammad Ali - Full Stack Product Engineer",
-    description: "AWS Cloud Specialist | MERN Stack Developer | AI Integration Expert",
-    url: "https://mu7ammad-3li.github.io",
-    siteName: "Muhammad Ali Portfolio",
-    locale: "en_US",
     type: "website",
+    locale: "en_US",
+    url: RESUME_DATA.personalWebsiteUrl,
+    siteName: `${RESUME_DATA.name}'s CV`,
+    title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
+    description: RESUME_DATA.about,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Ali - Full Stack Product Engineer",
-    description: "AWS Cloud Specialist | MERN Stack Developer | AI Integration Expert",
+    title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
+    description: RESUME_DATA.about,
     creator: "@Mu7ammad_3lii",
   },
+  alternates: {
+    canonical: RESUME_DATA.personalWebsiteUrl,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="relative min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-        </ThemeProvider>
+    <html lang="en" className={inter.className}>
+      <body>
+        <ErrorBoundary>{children}</ErrorBoundary>
       </body>
     </html>
   );
