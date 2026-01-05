@@ -42,10 +42,10 @@ export const RESUME_DATA = {
   },
   education: [
     {
-      school: "Faculty of Computers and Artificial Intelligence",
-      degree: "Bachelor's Degree in Computer Science",
-      start: "2019",
-      end: "2024",
+      school: "Suez Canal University",
+      degree: "Bachelor's Degree in Computers and Control Engineering",
+      start: "2013",
+      end: "2022",
     },
   ],
   work: [
