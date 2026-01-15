@@ -62,12 +62,14 @@ export function ParticleField({ count = 5000, color = "#6366f1" }: ParticleField
                         count={count}
                         array={particlesPosition}
                         itemSize={3}
+                        args={[particlesPosition, 3]}
                     />
                     <bufferAttribute
                         attach="attributes-size"
                         count={count}
                         array={particleSizes}
                         itemSize={1}
+                        args={[particleSizes, 1]}
                     />
                 </bufferGeometry>
                 <pointsMaterial
