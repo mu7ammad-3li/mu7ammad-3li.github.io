@@ -1,118 +1,38 @@
-import type { Metadata } from "next";
-import { Suspense } from "react";
-import { CommandMenu } from "@/components/command-menu";
-import { SectionErrorBoundary } from "@/components/section-error-boundary";
-import { SectionSkeleton } from "@/components/section-skeleton";
-import { RESUME_DATA } from "@/data/resume-data";
-import { generateResumeStructuredData } from "@/lib/structured-data";
-import { Education } from "./components/Education";
-import { Header } from "./components/Header";
-import { Projects } from "./components/Projects";
-import { Skills } from "./components/Skills";
-import { Summary } from "./components/Summary";
-import { WorkExperience } from "./components/WorkExperience";
+"use client";
 
-export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} - Resume`,
-  description: RESUME_DATA.about,
-  openGraph: {
-    title: `${RESUME_DATA.name} - Resume`,
-    description: RESUME_DATA.about,
-    type: "profile",
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${RESUME_DATA.name} - Resume`,
-    description: RESUME_DATA.about,
-  },
-};
+import dynamic from "next/dynamic";
+import { Navigation, HeroSection, AboutSection, ProjectsSection, SkillsSection, ContactSection, Footer } from "@/components/home";
 
-function getCommandMenuLinks() {
-  const links = [];
+// Dynamic import for Three.js to avoid SSR issues
+const ThreeScene = dynamic(() => import("@/components/three/ThreeScene").then(mod => ({ default: mod.ThreeScene })), {
+  ssr: false,
+  loading: () => (
+    <div className="fixed inset-0 bg-gray-900">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+      </div>
+    </div>
+  ),
+});
 
-  if (RESUME_DATA.personalWebsiteUrl) {
-    links.push({
-      url: RESUME_DATA.personalWebsiteUrl,
-      title: "Personal Website",
-    });
-  }
-
-  return [
-    ...links,
-    ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-      url: socialMediaLink.url,
-      title: socialMediaLink.name,
-    })),
-  ];
-}
-
-export default function ResumePage() {
-  const structuredData = generateResumeStructuredData();
-
+export default function HomePage() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
-      />
-      <main
-        className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
-        id="main-content"
-      >
-        <div className="sr-only">
-          <h1>{RESUME_DATA.name}&apos;s Resume</h1>
-        </div>
+    <div className="relative bg-gray-900 text-white min-h-screen">
+      {/* Three.js Background - Fixed behind content */}
+      <div className="fixed inset-0 z-0">
+        <ThreeScene className="w-full h-full" />
+      </div>
 
-        <section
-          className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4"
-          aria-label="Resume Content"
-        >
-          <SectionErrorBoundary sectionName="Header">
-            <Suspense fallback={<SectionSkeleton lines={4} />}>
-              <Header />
-            </Suspense>
-          </SectionErrorBoundary>
-
-          <div className="space-y-8 print:space-y-4">
-            <SectionErrorBoundary sectionName="Summary">
-              <Suspense fallback={<SectionSkeleton lines={2} />}>
-                <Summary summary={RESUME_DATA.summary} />
-              </Suspense>
-            </SectionErrorBoundary>
-
-            <SectionErrorBoundary sectionName="Work Experience">
-              <Suspense fallback={<SectionSkeleton lines={6} />}>
-                <WorkExperience work={RESUME_DATA.work} />
-              </Suspense>
-            </SectionErrorBoundary>
-
-            <SectionErrorBoundary sectionName="Education">
-              <Suspense fallback={<SectionSkeleton lines={3} />}>
-                <Education education={RESUME_DATA.education} />
-              </Suspense>
-            </SectionErrorBoundary>
-
-            <SectionErrorBoundary sectionName="Skills">
-              <Suspense fallback={<SectionSkeleton lines={2} />}>
-                <Skills skills={RESUME_DATA.skills} />
-              </Suspense>
-            </SectionErrorBoundary>
-
-            <SectionErrorBoundary sectionName="Projects">
-              <Suspense fallback={<SectionSkeleton lines={5} />}>
-                <Projects projects={RESUME_DATA.projects} />
-              </Suspense>
-            </SectionErrorBoundary>
-          </div>
-        </section>
-
-        <nav className="print:hidden" aria-label="Quick navigation">
-          <CommandMenu links={getCommandMenuLinks()} />
-        </nav>
-      </main>
-    </>
+      {/* Content */}
+      <div className="relative z-10">
+        <Navigation />
+        <HeroSection />
+        <AboutSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <ContactSection />
+        <Footer />
+      </div>
+    </div>
   );
 }

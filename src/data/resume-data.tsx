@@ -4,17 +4,18 @@ export const RESUME_DATA = {
   location: "Cairo, Egypt, GMT+2",
   locationLink: "https://www.google.com/maps/place/Cairo",
   about:
-    "Full Stack Engineer focused on building scalable cloud infrastructure and AI-powered applications",
+    "Software Engineer specializing in Backend Development, AI Systems, and LLM-powered applications",
   summary: (
     <>
-      I&apos;m a <strong>Full Stack Engineer</strong> with 2+ years of
-      experience building production systems that scale. I specialize in{" "}
-      <strong>cloud infrastructure automation</strong> (AWS),{" "}
-      <strong>enterprise application development</strong> (React, Node.js, Go),
-      and <strong>AI integration</strong> (RAG, LLMs). I&apos;ve reduced
-      infrastructure costs by 38%, built ERP systems from scratch, and
-      engineered secure digital publishing platforms. Currently seeking
-      opportunities to build impactful systems at scale.
+      I&apos;m a <strong>Software Engineer</strong> specializing in{" "}
+      <strong>backend development</strong>, <strong>AI-powered systems</strong>, and{" "}
+      <strong>multi-agent architectures</strong>. I build production LLM
+      applications with <strong>RAG</strong>, <strong>semantic caching</strong>,
+      and scalable infrastructure. Proven ability to reduce LLM costs by 40-80%
+      through intelligent caching, build autonomous workflow systems, and
+      integrate AI across multiple platforms. Currently exploring{" "}
+      <strong>Go + Python AI stacks</strong> and{" "}
+      <strong>Google Agent Development Kit (ADK)</strong>.
     </>
   ),
   avatarUrl: "/avatar.png",
@@ -51,25 +52,57 @@ export const RESUME_DATA = {
   work: [
     {
       company: "Remote Contract",
-      link: undefined,
-      badges: ["Remote"],
-      title: "Contract Software Engineer",
+      link: "https://github.com/mu7ammad-3li/assist-plus",
+      badges: ["Remote", "AI Systems"],
+      title: "Backend Engineer | AI Systems",
       start: "2024-09",
       end: null,
       description: (
         <>
-          Building secure digital publishing infrastructure with automated AWS
-          deployment pipeline. Architected 3-tier build system reducing build
-          times by 75% (2hrs → 30min) and costs by 38% through spot instance
-          optimization.
+          Architecting <strong>Assist+</strong>, a multi-agent AI customer
+          service platform with autonomous chatbots across Facebook, Instagram,
+          and WhatsApp. Built RAG-powered response engine with pgvector
+          embeddings and semantic caching system reducing LLM costs by 40-80%.
         </>
       ),
       highlights: [
-        "Optimized build pipeline from 2 hours to 30 minutes using Node.js & AWS EC2",
-        "Engineered spot instance fallback strategy reducing infrastructure costs by 38%",
-        "Architected 3-tier build pipeline with CloudFormation & Launch Templates",
-        "Implemented DRM protection, AES256 encryption, and IAM security policies",
-        "Built cross-platform Electron desktop reader with React and TypeScript",
+        "Built RAG-powered response engine with pgvector embeddings for 10K+ knowledge base articles",
+        "Implemented semantic caching reducing LLM API costs by 40-80% (0.92 similarity threshold)",
+        "Designed multi-agent bot engine with independent configs per platform, lead extraction, human handoff",
+        "Developed BullMQ workers for async message processing, conversation cleanup, auto-summarization",
+        "Integrated Meta Graph API for multi-platform messaging with OAuth 2.0 and webhook handling",
+      ],
+      technologies: [
+        "Bun",
+        "Hono",
+        "TypeScript",
+        "PostgreSQL",
+        "pgvector",
+        "Redis",
+        "BullMQ",
+        "OpenRouter",
+        "RAG",
+      ],
+    },
+    {
+      company: "Digital Publishing Company",
+      link: undefined,
+      badges: ["Remote", "Cloud Automation"],
+      title: "Backend Engineer | Cloud Automation",
+      start: "2024-09",
+      end: "2024-12",
+      description: (
+        <>
+          Built autonomous cloud orchestration system using AWS EC2 with
+          self-terminating instances. Reduced infrastructure costs by 99.7%
+          through spot instance optimization and automated lifecycle management.
+        </>
+      ),
+      highlights: [
+        "Built autonomous EC2 pipeline with self-terminating instances for zero-touch builds",
+        "Reduced infrastructure costs by 99.7% ($5+ → $0.015 per build) via spot optimization",
+        "Designed Infrastructure as Code with dynamic EC2 provisioning and PowerShell UserData",
+        "Implemented IAM policies with least privilege and CloudWatch logging integration",
       ],
       technologies: [
         "AWS EC2",
@@ -77,43 +110,8 @@ export const RESUME_DATA = {
         "CloudFormation",
         "IAM",
         "Node.js",
-        "Electron",
-        "React",
-        "TypeScript",
+        "PowerShell",
         "Docker",
-      ],
-    },
-    {
-      company: "MERIDIEN Engine",
-      link: "https://github.com/mu7ammad-3li/MERIDIEN",
-      badges: ["Side Project"],
-      title: "Founder & Maintainer",
-      start: "2025-09",
-      end: null,
-      description: (
-        <>
-          Designed and built MERIDIEN, a multi-tenant enterprise retail &amp;
-          inventory management system. Architected RESTful API in Go with
-          PostgreSQL and developed cross-platform mobile applications using
-          Flutter for Android and iOS.
-        </>
-      ),
-      highlights: [
-        "Architected multi-tenant SaaS system serving multiple retail businesses",
-        "Built RESTful API from scratch using Go with PostgreSQL for data persistence",
-        "Developed cross-platform mobile apps with Flutter for real-time inventory tracking",
-        "Implemented JWT-based authentication and role-based access control (RBAC)",
-        "Designed scalable database schema supporting multi-tenant isolation",
-      ],
-      technologies: [
-        "Go",
-        "PostgreSQL",
-        "Flutter",
-        "Dart",
-        "RESTful APIs",
-        "JWT",
-        "RBAC",
-        "Multi-tenant Architecture",
       ],
     },
     {
@@ -125,68 +123,100 @@ export const RESUME_DATA = {
       end: "2025-02",
       description: (
         <>
-          Led complete digital transformation from manual workflows to automated
-          enterprise systems. Built production ERP/CRM from scratch using MERN
-          stack, engineered RAG-powered AI customer support, and maintained
-          99.9% uptime for critical business APIs.
+          Built <strong>RAG-powered AI chatbot</strong> using Google Genkit and
+          Gemini for automated lead qualification. Developed enterprise ERP/CRM
+          from scratch and maintained 99.9% uptime as sole engineer.
         </>
       ),
       highlights: [
-        "Built enterprise ERP/CRM system from scratch with MERN stack, replacing manual spreadsheets",
         "Engineered RAG-powered customer support agent using Google Genkit & Gemini",
-        "Created real-time business analytics dashboard with Firebase for financial tracking",
-        "Maintained 99.9% uptime for critical APIs serving production data",
-        "End-to-end ownership as sole engineer managing full SDLC from design to deployment",
+        "Built enterprise ERP/CRM system from scratch with MERN stack",
+        "Created real-time analytics dashboard with Firebase for business intelligence",
+        "Maintained 99.9% uptime for critical APIs as sole engineer managing full SDLC",
       ],
       technologies: [
         "MongoDB",
         "Express",
         "React",
         "Node.js",
-        "Next.js",
-        "Firebase",
         "Genkit",
-        "TypeScript",
+        "Gemini",
+        "Firebase",
+        "RAG",
       ],
     },
   ],
   skills: [
-    "React.js",
-    "Next.js",
+    "RAG Systems",
+    "Semantic Caching",
+    "pgvector",
+    "Multi-Agent Systems",
+    "LLM Integration",
+    "OpenRouter",
+    "Google Gemini",
+    "Google ADK",
+    "Prompt Engineering",
+    "spaCy NLP",
+    "Python",
+    "Go",
     "TypeScript",
     "Node.js",
-    "Go",
-    "Python",
-    "AWS (EC2, S3, CloudFormation, IAM)",
-    "Docker",
-    "MongoDB",
+    "Bun",
+    "FastAPI",
+    "Hono",
     "PostgreSQL",
-    "Firebase",
-    "GraphQL",
+    "MongoDB",
+    "Redis",
+    "BullMQ",
+    "AWS (EC2, S3, IAM)",
+    "Docker",
     "REST APIs",
-    "Genkit",
-    "RAG",
-    "Electron",
-    "Tailwind CSS",
-    "shadcn/ui",
-    "CI/CD",
-    "Linux",
-    "Security (JWT, RBAC, AES256, DRM)",
+    "Meta Graph API",
   ],
   projects: [
     {
-      title: "CV-lize",
+      title: "Assist+",
       techStack: [
-        "Side Project",
-        "React",
-        "FastAPI",
-        "MongoDB",
-        "Google Gemini",
-        "spaCy",
-        "TypeScript",
+        "Multi-Agent AI",
+        "Bun",
+        "Hono",
+        "PostgreSQL",
+        "pgvector",
+        "Redis",
+        "BullMQ",
+        "OpenRouter",
       ],
       description:
-        "AI-powered resume optimization platform with ATS compatibility scoring and professional PDF generation",
+        "Multi-agent AI customer service platform with RAG, semantic caching (40-80% cost reduction), and autonomous chatbots across Facebook, Instagram & WhatsApp",
+      link: {
+        label: "github.com",
+        href: "https://github.com/mu7ammad-3li/assist-plus",
+      },
+      logo: undefined,
+    },
+    {
+      title: "MERIDIEN",
+      techStack: ["Backend", "Go", "Gin", "PostgreSQL", "GORM", "Flutter"],
+      description:
+        "Multi-tenant SaaS backend with 26 RESTful endpoints, complete data isolation, JWT auth with refresh tokens, and RBAC",
+      link: {
+        label: "meridien-engine.github.io",
+        href: "https://meridien-engine.github.io/",
+      },
+      logo: undefined,
+    },
+    {
+      title: "CV-lize",
+      techStack: [
+        "AI/NLP",
+        "Python",
+        "FastAPI",
+        "spaCy",
+        "OpenRouter",
+        "MongoDB",
+      ],
+      description:
+        "AI-powered resume optimization with multi-model architecture (OpenRouter + Gemini fallback), NLP pipelines, and 95%+ ATS compatibility scoring",
       link: {
         label: "cv-lize.vercel.app",
         href: "https://cv-lize.vercel.app",
@@ -194,70 +224,30 @@ export const RESUME_DATA = {
       logo: undefined,
     },
     {
-      title: "SwiftCart",
-      techStack: [
-        "Side Project",
-        "React",
-        "TypeScript",
-        "Firebase",
-        "Vite",
-        "shadcn/ui",
-      ],
-      description:
-        "Modern e-commerce platform with real-time inventory management, secure authentication, and shopping cart functionality",
-      link: {
-        label: "github.com",
-        href: "https://github.com/mu7ammad-3li/swiftcart",
-      },
-      logo: undefined,
-    },
-    {
-      title: "MERIDIEN",
-      techStack: ["Side Project", "Go", "Flutter", "PostgreSQL", "JWT"],
-      description:
-        "Multi-tenant enterprise retail & inventory management system with cross-platform mobile apps and RESTful API",
-      link: {
-        label: "github.com",
-        href: "https://github.com/mu7ammad-3li/MERIDIEN",
-      },
-      logo: undefined,
-    },
-    {
       title: "OmniAssistant",
       techStack: [
-        "Side Project",
+        "RAG Agent",
         "Next.js",
-        "Genkit",
-        "Google Gemini",
+        "Google Genkit",
+        "Gemini",
         "TypeScript",
       ],
       description:
-        "AI-powered conversational chatbot with RAG-based knowledge retrieval, lead qualification automation, and admin dashboard",
+        "RAG-based conversational agent with semantic knowledge retrieval, lead qualification automation, and admin dashboard",
       link: {
         label: "github.com",
-        href: "https://github.com/mu7ammad-3li/OmniAssistant",
+        href: "https://github.com/mu7ammad-3li/omniassistant",
       },
       logo: undefined,
     },
     {
       title: "log-sentinel",
-      techStack: ["Side Project", "TypeScript", "Node.js", "Zod"],
+      techStack: ["CLI Tool", "TypeScript", "Node.js Streams", "Zod"],
       description:
-        "Memory-efficient CLI tool for analyzing large log files with stream-based processing and comprehensive statistics",
+        "Memory-efficient CLI for analyzing large log files with O(1) space complexity stream-based processing",
       link: {
         label: "github.com",
         href: "https://github.com/mu7ammad-3li/log-sentinel",
-      },
-      logo: undefined,
-    },
-    {
-      title: "SwiftDashboard",
-      techStack: ["Side Project", "React", "TypeScript", "Vite", "Recharts"],
-      description:
-        "Comprehensive admin dashboard for e-commerce management with real-time analytics and data visualizations",
-      link: {
-        label: "github.com",
-        href: "https://github.com/mu7ammad-3li/SwiftDashboard",
       },
       logo: undefined,
     },

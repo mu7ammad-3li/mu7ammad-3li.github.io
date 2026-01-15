@@ -109,3 +109,63 @@ html {
 .print-force-new-page {
     page-break-before: always;
 }
+
+/* Scrolling animation for skills marquee */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+    animation-play-state: paused;
+}
+
+/* Line clamp utility */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Custom cursor for interactive elements */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Glass effect */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Gradient text utility */
+.gradient-text {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Glow effects */
+.glow-indigo {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+}
+
+.glow-purple {
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.3);
+}
+
+/* Canvas fix for Three.js */
+canvas {
+    display: block;
+}
