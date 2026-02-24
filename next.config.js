@@ -7,7 +7,7 @@ const nextConfig = {
   basePath: isProd ? "" : "",
   images: {
     unoptimized: true,
-    domains: ["avatars.githubusercontent.com"],
+    remotePatterns: [new URL("https://avatars.githubusercontent.com")],
   },
   trailingSlash: true,
   reactStrictMode: true,
