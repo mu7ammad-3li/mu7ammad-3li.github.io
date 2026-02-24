@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { RESUME_DATA } from "@/data/resume-data";
@@ -55,6 +56,27 @@ export function HeroSection() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="max-w-4xl mx-auto"
                 >
+                    {/* Profile Image */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.1, duration: 0.6 }}
+                        className="mb-6 flex justify-center"
+                    >
+                        <div className="relative w-44 h-44 md:w-56 md:h-56 lg:w-64 lg:h-64">
+                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full blur-lg opacity-50 animate-pulse" />
+                            <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-gray-700/50 bg-gray-800">
+                                <Image
+                                    src="/Masked.png"
+                                    alt={RESUME_DATA.name}
+                                    fill
+                                    className="object-cover object-top"
+                                    priority
+                                />
+                            </div>
+                        </div>
+                    </motion.div>
+
                     {/* Greeting */}
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -147,7 +169,7 @@ export function HeroSection() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.1 }}
-                        className="mt-12 flex justify-center gap-6"
+                        className="mt-8 mb-20 flex justify-center gap-6"
                     >
                         {RESUME_DATA.contact.social.map((social) => (
                             <a
@@ -186,11 +208,12 @@ export function HeroSection() {
                 transition={{ delay: 1.3 }}
                 className="absolute bottom-8 left-1/2 -translate-x-1/2"
             >
-                <a href="#about" className="flex flex-col items-center gap-2 text-gray-500 hover:text-gray-300 transition-colors">
-                    <span className="text-sm">Scroll Down</span>
+                <a href="#about" className="flex flex-col items-center gap-2 text-gray-300 hover:text-white transition-colors group">
+                    <span className="text-sm font-medium tracking-wide">Scroll Down</span>
                     <motion.div
-                        animate={{ y: [0, 8, 0] }}
+                        animate={{ y: [0, 10, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity }}
+                        className="p-2 rounded-full border border-gray-600 group-hover:border-indigo-400 transition-colors"
                     >
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

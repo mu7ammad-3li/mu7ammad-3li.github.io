@@ -4,24 +4,22 @@ export const RESUME_DATA = {
   location: "Cairo, Egypt, GMT+2",
   locationLink: "https://www.google.com/maps/place/Cairo",
   about:
-    "Software Engineer specializing in Backend Development, AI Systems, and LLM-powered applications",
+    "Software Engineer specializing in scalable microservices and cloud architecture",
   summary: (
     <>
-      I&apos;m a <strong>Software Engineer</strong> specializing in{" "}
-      <strong>backend development</strong>, <strong>AI-powered systems</strong>, and{" "}
-      <strong>multi-agent architectures</strong>. I build production LLM
-      applications with <strong>RAG</strong>, <strong>semantic caching</strong>,
-      and scalable infrastructure. Proven ability to reduce LLM costs by 40-80%
-      through intelligent caching, build autonomous workflow systems, and
-      integrate AI across multiple platforms. Currently exploring{" "}
-      <strong>Go + Python AI stacks</strong> and{" "}
-      <strong>Google Agent Development Kit (ADK)</strong>.
+      Performance-driven <strong>Backend Engineer</strong> with 3+ years of
+      experience specializing in <strong>scalable microservices</strong> and{" "}
+      <strong>cloud architecture</strong> (Node.js, Go, Python). Proven track
+      record of optimizing infrastructure costs—notably reducing AWS spend by
+      99%—and building <strong>high-concurrency systems</strong> using
+      PostgreSQL, Redis, and Docker. Adept at integrating{" "}
+      <strong>LLMs</strong> (Gemini, OpenRouter) to automate business workflows.
     </>
   ),
   avatarUrl: "/avatar.png",
   personalWebsiteUrl: "https://mu7ammad-3li.github.io",
   contact: {
-    email: "mu7ammad.3lii2@gmail.com",
+    email: "muhammadal@proton.me",
     tel: "+201125939530",
     social: [
       {
@@ -44,210 +42,189 @@ export const RESUME_DATA = {
   education: [
     {
       school: "Suez Canal University",
-      degree: "Bachelor's Degree in Computers and Control Engineering",
-      start: "2013",
-      end: "2022",
+      degree:
+        "Bachelor of Engineering, Computer and Control Systems Engineering",
+      start: "",
+      end: "2023",
+      description:
+        "Thesis: Malware Detection Based on Static and Dynamic Features - Conducted in-depth analysis of executable files to identify malicious patterns.",
+    },
+    {
+      school: "ITI (Information Technology Institute)",
+      degree: "60 Hours Cybersecurity Training Program",
+      start: "",
+      end: "",
+      description:
+        "Completed intensive training in Linux and Windows server administration, network security, penetration testing, and security assessment methodologies.",
     },
   ],
   work: [
     {
-      company: "Remote Contract",
-      link: "https://github.com/mu7ammad-3li/assist-plus",
-      badges: ["Remote", "AI Systems"],
-      title: "Backend Engineer | AI Systems",
-      start: "2024-09",
-      end: null,
-      description: (
-        <>
-          Architecting <strong>Assist+</strong>, a multi-agent AI customer
-          service platform with autonomous chatbots across Facebook, Instagram,
-          and WhatsApp. Built RAG-powered response engine with pgvector
-          embeddings and semantic caching system reducing LLM costs by 40-80%.
-        </>
-      ),
-      highlights: [
-        "Built RAG-powered response engine with pgvector embeddings for 10K+ knowledge base articles",
-        "Implemented semantic caching reducing LLM API costs by 40-80% (0.92 similarity threshold)",
-        "Designed multi-agent bot engine with independent configs per platform, lead extraction, human handoff",
-        "Developed BullMQ workers for async message processing, conversation cleanup, auto-summarization",
-        "Integrated Meta Graph API for multi-platform messaging with OAuth 2.0 and webhook handling",
-      ],
-      technologies: [
-        "Bun",
-        "Hono",
-        "TypeScript",
-        "PostgreSQL",
-        "pgvector",
-        "Redis",
-        "BullMQ",
-        "OpenRouter",
-        "RAG",
-      ],
-    },
-    {
-      company: "Digital Publishing Company",
+      company: "Freelance",
       link: undefined,
-      badges: ["Remote", "Cloud Automation"],
-      title: "Backend Engineer | Cloud Automation",
-      start: "2024-09",
-      end: "2024-12",
+      badges: ["Remote"],
+      title: "Fullstack Engineer",
+      start: "2024-08",
+      end: "2025-08",
       description: (
         <>
-          Built autonomous cloud orchestration system using AWS EC2 with
-          self-terminating instances. Reduced infrastructure costs by 99.7%
-          through spot instance optimization and automated lifecycle management.
+          Architected CI/CD deployment pipelines on AWS EC2 and built
+          high-performance desktop applications with Electron and TypeScript.
         </>
       ),
       highlights: [
-        "Built autonomous EC2 pipeline with self-terminating instances for zero-touch builds",
-        "Reduced infrastructure costs by 99.7% ($5+ → $0.015 per build) via spot optimization",
-        "Designed Infrastructure as Code with dynamic EC2 provisioning and PowerShell UserData",
-        "Implemented IAM policies with least privilege and CloudWatch logging integration",
+        "Architected an automated CI/CD deployment pipeline on AWS EC2, utilizing Spot Instances to slash build costs by 70%",
+        "Engineered a high-performance desktop application using Electron and TypeScript, implementing complex PDF rendering and real-time annotation engines",
+        "Optimized media processing workflows by integrating FFmpeg with Amazon S3, ensuring scalable storage and rapid file retrieval",
+        "Developed custom Node.js automation scripts to synchronize third-party API data, reducing manual data entry by 40%",
       ],
       technologies: [
         "AWS EC2",
         "S3",
-        "CloudFormation",
-        "IAM",
+        "Electron",
+        "TypeScript",
         "Node.js",
-        "PowerShell",
+        "FFmpeg",
         "Docker",
       ],
     },
     {
       company: "Bella Egypt",
       link: undefined,
-      badges: ["On-site"],
+      badges: ["Part Time", "Cairo"],
       title: "Software Engineer",
-      start: "2023-01",
-      end: "2025-02",
+      start: "2024-02",
+      end: "2025-11",
       description: (
         <>
-          Built <strong>RAG-powered AI chatbot</strong> using Google Genkit and
-          Gemini for automated lead qualification. Developed enterprise ERP/CRM
-          from scratch and maintained 99.9% uptime as sole engineer.
+          Integrated Google Gemini AI to build autonomous customer support
+          chatbots and maintained legacy backend systems.
         </>
       ),
       highlights: [
-        "Engineered RAG-powered customer support agent using Google Genkit & Gemini",
-        "Built enterprise ERP/CRM system from scratch with MERN stack",
-        "Created real-time analytics dashboard with Firebase for business intelligence",
-        "Maintained 99.9% uptime for critical APIs as sole engineer managing full SDLC",
+        "Integrated Google Gemini AI to build an autonomous customer support chatbot, increasing lead qualification rates by 25%",
+        "Maintained and optimized legacy backend APIs and database schemas to ensure system stability during scaling",
+      ],
+      technologies: [
+        "Google Gemini",
+        "Node.js",
+        "PostgreSQL",
+        "REST APIs",
+      ],
+    },
+    {
+      company: "Bella Egypt",
+      link: undefined,
+      badges: ["Founder", "Cairo"],
+      title: "Founder Software Engineer",
+      start: "2023-02",
+      end: "2024-02",
+      description: (
+        <>
+          Architected and developed a full-stack ERP/CRM system (MERN) from the
+          ground up, supporting core business operations and customer lifecycle
+          management.
+        </>
+      ),
+      highlights: [
+        "Architected and developed a full-stack ERP/CRM system (MERN) from the ground up, supporting core business operations and customer lifecycle management",
+        "Engineered a real-time analytics dashboard using Recharts providing stakeholders with actionable insights into sales velocity and inventory turnover",
       ],
       technologies: [
         "MongoDB",
         "Express",
         "React",
         "Node.js",
-        "Genkit",
-        "Gemini",
+        "Recharts",
         "Firebase",
-        "RAG",
       ],
     },
   ],
   skills: [
-    "RAG Systems",
-    "Semantic Caching",
-    "pgvector",
-    "Multi-Agent Systems",
-    "LLM Integration",
-    "OpenRouter",
-    "Google Gemini",
-    "Google ADK",
-    "Prompt Engineering",
-    "spaCy NLP",
-    "Python",
-    "Go",
+    // Languages
+    "JavaScript",
     "TypeScript",
+    "Go",
+    "Python",
+    "SQL",
+    // Frontend
+    "React",
+    "Next.js",
+    // Backend
     "Node.js",
     "Bun",
-    "FastAPI",
     "Hono",
+    "Express",
+    "FastAPI",
+    "Gin",
+    // Databases
     "PostgreSQL",
     "MongoDB",
     "Redis",
-    "BullMQ",
-    "AWS (EC2, S3, IAM)",
+    // Cloud/Tools
+    "AWS (EC2, S3)",
     "Docker",
+    "Git",
     "REST APIs",
-    "Meta Graph API",
+    // Cybersecurity
+    "Malware Analysis",
+    "DRAKVUF",
+    "Penetration Testing",
+    "Network Security",
   ],
   projects: [
     {
-      title: "Assist+",
-      techStack: [
-        "Multi-Agent AI",
-        "Bun",
-        "Hono",
-        "PostgreSQL",
-        "pgvector",
-        "Redis",
-        "BullMQ",
-        "OpenRouter",
-      ],
+      title: "MERIDIEN",
+      techStack: ["Go", "Gin", "PostgreSQL", "JWT", "REST API"],
       description:
-        "Multi-agent AI customer service platform with RAG, semantic caching (40-80% cost reduction), and autonomous chatbots across Facebook, Instagram & WhatsApp",
+        "Retail Management System - High-concurrency REST API in Go (Gin) featuring 26+ endpoints for complex retail logic with JWT-based authentication and optimized PostgreSQL schema",
       link: {
-        label: "github.com",
+        label: "GitHub",
+        href: "https://github.com/mu7ammad-3li/meridien",
+      },
+      logo: undefined,
+    },
+    {
+      title: "Assist+",
+      techStack: ["Bun", "Hono", "Redis", "BullMQ", "pgvector", "LLM"],
+      description:
+        "Customer Service Platform - Distributed messaging API processing multi-channel webhooks (Facebook/Instagram) with Redis background tasks and semantic caching reducing LLM API overhead by 60%",
+      link: {
+        label: "GitHub",
         href: "https://github.com/mu7ammad-3li/assist-plus",
       },
       logo: undefined,
     },
     {
-      title: "MERIDIEN",
-      techStack: ["Backend", "Go", "Gin", "PostgreSQL", "GORM", "Flutter"],
-      description:
-        "Multi-tenant SaaS backend with 26 RESTful endpoints, complete data isolation, JWT auth with refresh tokens, and RBAC",
-      link: {
-        label: "meridien-engine.github.io",
-        href: "https://meridien-engine.github.io/",
-      },
-      logo: undefined,
-    },
-    {
       title: "CV-lize",
-      techStack: [
-        "AI/NLP",
-        "Python",
-        "FastAPI",
-        "spaCy",
-        "OpenRouter",
-        "MongoDB",
-      ],
+      techStack: ["Python", "FastAPI", "spaCy", "NER", "LLM"],
       description:
-        "AI-powered resume optimization with multi-model architecture (OpenRouter + Gemini fallback), NLP pipelines, and 95%+ ATS compatibility scoring",
+        "Resume Analysis Tool - FastAPI service utilizing spaCy for Named Entity Recognition (NER) to extract key professional data points with LLM-powered scoring algorithm",
       link: {
-        label: "cv-lize.vercel.app",
-        href: "https://cv-lize.vercel.app",
+        label: "GitHub",
+        href: "https://github.com/mu7ammad-3li/cv-lize",
       },
       logo: undefined,
     },
     {
-      title: "OmniAssistant",
-      techStack: [
-        "RAG Agent",
-        "Next.js",
-        "Google Genkit",
-        "Gemini",
-        "TypeScript",
-      ],
+      title: "SwiftDashboard",
+      techStack: ["React", "TypeScript", "Recharts", "Firebase"],
       description:
-        "RAG-based conversational agent with semantic knowledge retrieval, lead qualification automation, and admin dashboard",
+        "E-commerce Admin Panel - Feature-rich administrative dashboard enabling staff to manage products, orders, customers, and view financial data visualizations",
       link: {
-        label: "github.com",
-        href: "https://github.com/mu7ammad-3li/omniassistant",
+        label: "GitHub",
+        href: "https://github.com/mu7ammad-3li/swift-dashboard",
       },
       logo: undefined,
     },
     {
-      title: "log-sentinel",
-      techStack: ["CLI Tool", "TypeScript", "Node.js Streams", "Zod"],
+      title: "SwiftCart",
+      techStack: ["React", "TypeScript", "Firebase"],
       description:
-        "Memory-efficient CLI for analyzing large log files with O(1) space complexity stream-based processing",
+        "Modern E-commerce Platform - Complete e-commerce solution with product management, dynamic shopping cart, and secure checkout process",
       link: {
-        label: "github.com",
-        href: "https://github.com/mu7ammad-3li/log-sentinel",
+        label: "GitHub",
+        href: "https://github.com/mu7ammad-3li/swift-cart",
       },
       logo: undefined,
     },

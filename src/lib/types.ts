@@ -27,6 +27,7 @@ export interface ResumeData {
     degree: string;
     start: string;
     end: string;
+    description?: string;
   }>;
   work: Array<{
     company: string;
